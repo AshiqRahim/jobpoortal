@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+      body{
+
+      background-color:green;
+      }
+
+    </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% include 'navbar.html' %}
+<div style="margin-bottom:350px;margin-top:50px; margin-left:800px;" >
+<form method="post">{% csrf_token %}
+  <label>login</label>
+  <input type="email" name="email" ><br><br>
+  <label>password</label>
+  <input  type="password" name="password"><br><br>
+
+  <input type="submit"  name="submit">
+</form>
+</div>
+{% include 'footer.html' %}
+
+</body>
+</html>
